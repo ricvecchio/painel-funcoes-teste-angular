@@ -30,9 +30,9 @@ Acesse no navegador:
 
 ## 🧩 Funcionalidades
 
-- Abrir Conta: envia requisição para http://localhost:8081/api/contas/abrir
-- Consultar Contas: consome http://localhost:8081/api/contas
-- Testar Serviços: verifica status do Kafka (http://localhost:8082)
+- **Abrir Conta:** envia requisição para `http://localhost:8081/api/contas/abrir`
+- **Consultar Contas:** consome `http://localhost:8081/api/contas`
+- **Testar Serviços:** verifica status do Kafka `http://localhost:8082`
 
 ---
 
