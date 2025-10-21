@@ -45,6 +45,7 @@ ng serve --open
 Navegador local:
 👉 http://localhost:4200
 
+---
 
 ### 🚀 Compilar para produção (opcional)
 Gerar os arquivos otimizados para deploy (ex.: Render, Vercel, Hostinger etc.):
