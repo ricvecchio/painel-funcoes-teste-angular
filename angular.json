@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-java-frontend": {
+    "painel-funcoes-teste-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,12 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-java-frontend",
+            "outputPath": "dist/painel-funcoes-teste-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -27,14 +25,10 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -64,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-java-frontend:build:production"
+              "buildTarget": "painel-funcoes-teste-angular:build:production"
             },
             "development": {
-              "buildTarget": "angular-java-frontend:build:development"
+              "buildTarget": "painel-funcoes-teste-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,10 +72,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -90,6 +81,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -97,5 +89,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3b22422d-d8cc-4b03-a375-1487ef3978c4"
   }
 }
