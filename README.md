@@ -14,31 +14,49 @@ O painel consome endpoints dos serviços `conta-service` (porta 8081) e `kafka-s
 
 ---
 
-## ⚙️ Como rodar localmente
-```bash
-git clone https://github.com/ricvecchio/painel-funcoes-teste-angular.git
-cd painel-funcoes-teste-angular
-npm install
-npm start
-```
---- 
+## 🧩 Funcionalidades
 
-Acesse no navegador:
-👉 http://localhost:4200
+- **Cria uma nova conta e envia para o Kafka (conta-service):** POST `http://localhost:8081/api/contas/abrir`
+- **Lista as contas processadas e persistidas (kafka-service):** GET `http://localhost:8082/api/contas`
 
 ---
 
-## 🧩 Funcionalidades
+## ▶️ Como rodar localmente 
 
-- **Abrir Conta:** envia requisição para `http://localhost:8081/api/contas/abrir`
-- **Consultar Contas:** consome `http://localhost:8081/api/contas`
-- **Testar Serviços:** verifica status do Kafka `http://localhost:8082`
+### 1️⃣ Clonar o repositório do GitHub
+
+- Clone este repositório
+
+```bash
+git clone https://github.com/ricvecchio/painel-funcoes-teste-angular.git
+```
+
+### 2️⃣ Navegação local do projeto
+```bash
+cd ~/"Projetos/Projeto para Estudos (Frontend + Backend)/painel-funcoes-teste-angular"
+```
+
+### 3️⃣ Instalar as dependências e abrir o servidor de desenvolvimento
+```bash
+npm install
+ng serve --open
+```
+
+Navegador local:
+👉 http://localhost:4200
+
+
+### 🚀 Compilar para produção (opcional)
+Gerar os arquivos otimizados para deploy (ex.: Render, Vercel, Hostinger etc.):
+```bash
+ng build --configuration production
+```
+Os arquivos gerados ficam em `dist/nome-do-projeto/`.
 
 ---
 
 ## 🧠 Próximos passos
 
-- Habilitar CORS no backend (conta-service e kafka-service)
 - Adicionar componentes Angular Material (cards, snackbar)
 - Implementar telas de listagem de contas e histórico
 
