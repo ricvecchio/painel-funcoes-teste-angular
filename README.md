@@ -23,6 +23,9 @@ O painel consome endpoints dos serviços `conta-service` (porta 8081) e `kafka-s
 
 ## ▶️ Como rodar localmente 
 
+⚠️ Subir antes os serviços do backend (PostgreSQL, Zookeeper, Kafka Broker, conta-service e kafka-service):
+Seguir passo a passo: 👉 [Deploy Local com Docker](https://github.com/ricvecchio/project-docs/tree/main/conta-kafka-service#-deploy-local-com-docker)
+
 ### 1️⃣ Clonar o repositório do GitHub
 
 - Clone este repositório
@@ -63,7 +66,7 @@ Os arquivos gerados ficam em `dist/nome-do-projeto/`.
 
 ---
 
-### 📦 Repositório do backend: 👉  [api-funcoes-teste-spring](https://github.com/ricvecchio/api-funcoes-teste-spring/blob/main/README.md)
+### 📦 Repositório do backend: 👉 [api-funcoes-teste-spring](https://github.com/ricvecchio/api-funcoes-teste-spring/blob/main/README.md)
 
 
 ---
