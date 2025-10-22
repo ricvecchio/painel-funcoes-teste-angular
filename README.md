@@ -1,7 +1,9 @@
 # 🧭 painel-funcoes-teste-angular
 
-Frontend em **Angular 20** desenvolvido para o projeto **API Funções Teste (Spring Boot + Kafka)**.  
-O painel consome endpoints dos serviços `conta-service` (porta 8081) e `kafka-service` (porta 8082).
+**Frontend Angular 20** desenvolvido para o projeto **API Funções Teste (Spring Boot + Kafka)**.
+O painel consome endpoints dos serviços backend:
+- `conta-service` (porta **8081**)
+- `kafka-service` (porta **8082**)
 
 ---
 
@@ -10,21 +12,23 @@ O painel consome endpoints dos serviços `conta-service` (porta 8081) e `kafka-s
 - TypeScript 5.8
 - Angular Material
 - RxJS e HttpClient
-- Integração com backend Spring Boot e Kafka
+- Integração com backend **Spring Boot e Apache Kafka**
 
 ---
 
 ## 🧩 Funcionalidades
 
-- **Cria uma nova conta e envia para o Kafka (conta-service):** POST `http://localhost:8081/api/contas/abrir`
-- **Lista as contas processadas e persistidas (kafka-service):** GET `http://localhost:8082/api/contas`
+| Ação                                    | Serviço         | Método | Endpoint                                 |
+| --------------------------------------- | --------------- | ------ | ---------------------------------------- |
+| Criar nova conta e enviar para o Kafka  | `conta-service` | `POST` | `http://localhost:8081/api/contas/abrir` |
+| Listar contas processadas e persistidas | `kafka-service` | `GET`  | `http://localhost:8082/api/contas`       |
 
 ---
 
 ## ▶️ Como rodar localmente 
 
-⚠️ Subir antes os serviços do backend (PostgreSQL, Zookeeper, Kafka Broker, conta-service e kafka-service):
-Seguir passo a passo: 👉 [Deploy Local com Docker](https://github.com/ricvecchio/project-docs/tree/main/conta-kafka-service#-deploy-local-com-docker)
+⚠️ **Antes de iniciar**, é necessário subir o ambiente backend (**PostgreSQL, Zookeeper, Kafka Broker, conta-service e kafka-service**).
+Consulte o guia completo: [Deploy Local com Docker](https://github.com/ricvecchio/project-docs/tree/main/conta-kafka-service#-deploy-local-com-docker)
 
 ### 1️⃣ Clonar o repositório do GitHub
 
@@ -50,24 +54,24 @@ Navegador local:
 
 ---
 
-### 🚀 Compilar para produção (opcional)
-Gerar os arquivos otimizados para deploy (ex.: Render, Vercel, Hostinger etc.):
+### 🚀 Build de Produção
+Para gerar os arquivos otimizados para deploy (Render, Vercel, Hostinger etc.):
 ```bash
 ng build --configuration production
 ```
-Os arquivos gerados ficam em `dist/nome-do-projeto/`.
+Os arquivos gerados ficam disponíveis em: `dist/nome-do-projeto/`.
 
 ---
 
 ## 🧠 Próximos passos
 
-- Adicionar componentes Angular Material (cards, snackbar)
-- Implementar telas de listagem de contas e histórico
+- Adicionar componentes **Angular Material** (cards, snackbar)
+- Implementar telas de **listagem de contas** e **histórico de operações**
 
 ---
 
-### 📦 Repositório do backend: 👉 [api-funcoes-teste-spring](https://github.com/ricvecchio/api-funcoes-teste-spring/blob/main/README.md)
-
+### 📦 Repositórios Relacionados: 
+- **Backend (Spring Boot + Kafka)**: [api-funcoes-teste-spring](https://github.com/ricvecchio/api-funcoes-teste-spring/blob/main/README.md)
 
 ---
 
